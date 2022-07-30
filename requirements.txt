@@ -5,6 +5,7 @@ pandas
 numpy
 PyYAML
 tensorflow
+tensorflow_datasets
 mkdocs-material
 ### local packages -
 -e . # << uncomment this to install from setup.py

@@ -1,12 +1,20 @@
-# import module
+import tensorflow_datasets as tfds
+from src.constants import *
+import tensorflow as tf
+from src import logging
 
 class DataIngestionPreperation:
     def __init__(self,):
         self.dataset_name = "imdb_reviews"
 
     def load_data(self):
-        pass
-
+        dataset, info = tfds.load(
+                                    name=self.dataset_name, 
+                                    with_info=True, 
+                                    as_supervised=True)
+        self.train_ds, self.test_ds = dataset["train_ds"], dataset["test"]                            
+        logging.info(f"{self.dataset_name} dataset dowloaded with info:\n{info}")
+        
     def shuffle_and_batch(self):
         pass
 
