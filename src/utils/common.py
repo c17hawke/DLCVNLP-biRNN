@@ -1,9 +1,10 @@
 import os
 import yaml
-import logging
+from src import logging
 import time
 import pandas as pd
 import json
+import joblib
 
 def read_yaml(path_to_yaml: str) -> dict:
     with open(path_to_yaml) as yaml_file:
@@ -22,3 +23,12 @@ def save_json(path: str, data: dict) -> None:
         json.dump(data, f, indent=4)
 
     logging.info(f"json file saved at: {path}")
+
+def save_bin(data, path: str) -> None:
+    joblib.dump(value=data, filename=path)
+    logging.info(f"bin file saved at: {path}")
+
+def load_bin(path: str):
+    data = joblib.load(path)
+    logging.info(f"bin file loaded from: {path}")
+    return data
