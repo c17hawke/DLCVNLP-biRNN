@@ -1,0 +1,8 @@
+# add stages here 
+# stages:
+#   stage_name:
+#     cmd: python src/pipeline/stage_01______.py
+#     deps:
+#     - src/pipeline/stage_01______.py
+#     outs:
+#     - output_data_of_file_path
