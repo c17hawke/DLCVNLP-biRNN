@@ -1,1 +1,7 @@
 # This contains params to be used by the stages to train or predict
+training:
+  BUFFER_SIZE: 10000
+  BATCH_SIZE: 64
+  VOCAB_SIZE: 1000
+  OUTPUT_DIM: 64
+  EPOCHS: 10
