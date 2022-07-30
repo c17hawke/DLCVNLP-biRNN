@@ -8,7 +8,8 @@ from src.components import DataIngestionPreperation
 STAGE = "Data ingestion and preparation" ## <<< change stage name 
 
 def main():
-    obj = DataIngestionPreperation()
+    data_ing_prep_obj = DataIngestionPreperation()
+    data_ing_prep_obj.load_data()
 
 
 if __name__ == '__main__':

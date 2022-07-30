@@ -12,7 +12,7 @@ class DataIngestionPreperation:
                                     name=self.dataset_name, 
                                     with_info=True, 
                                     as_supervised=True)
-        self.train_ds, self.test_ds = dataset["train_ds"], dataset["test"]                            
+        self.train_ds, self.test_ds = dataset["train"], dataset["test"]                            
         logging.info(f"{self.dataset_name} dataset dowloaded with info:\n{info}")
         
     def shuffle_and_batch(self):
